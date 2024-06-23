@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Change Style Delayed Example</title>
+  <style>
+    /* Исходные стили элемента для примера */
+    .initial-style {
+      background-color: blue;
+      color: white;
+      padding: 10px;
+      text-align: center;
+    }
+    .new-style {
+      background-color: green;
+      color: yellow;
+    }
+  </style>
+</head>
+<body>
+
+    <!--""Изменение стиля элемента через заданное время""
+
+Напишите функцию changeStyleDelayed, которая принимает идентификатор элемента и время задержки (в миллисекундах) в качестве аргументов. Функция должна изменить стиль элемента через указанное время.
+
+// Пример использования функции
+changeStyleDelayed('myElement', 2000); // Через 2 секунды изменяет стиль элемента с id 'myElement'"-->
+
+
+  <div id="myElement" 
+  class="initial-style">This is my element
+</div>
+
+  <script>
+    function changeStyleDelayed(elementId, delay) {
+      setTimeout(() => {
+        const element = document.getElementById(elementId);
+        
+        if (element) {
+          // Пример изменения стиля элемента
+          element.style.backgroundColor = 'green';
+          element.style.color = 'yellow';
+          element.style.fontSize = '20px';
+          element.style.padding = '20px';
+          element.style.borderRadius = '5px';
+        } else {
+          console.error(`Element with id "${elementId}" not found.`);
+        }
+      }, delay);
+    }
+
+    // Пример использования функции
+    changeStyleDelayed('myElement', 2000); // Через 2 секунды изменяет стиль элемента с id 'myElement'
+  </script>
+</body>
+</html>
